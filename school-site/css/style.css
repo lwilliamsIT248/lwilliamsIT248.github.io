@@ -80,17 +80,15 @@ header, footer {
 /* Imported Typfaces */
 
 @font-face {
-	
-		font-family:Coolfont;
-		src: url(../fonts/montserrat-regular.ttf) format('truetype');
+		font-family: 'MontserratRegular';
+		src: url('../fonts/montserrat-regular.ttf') format('truetype');
 		font-weight:normal;
 		font-style:normal;
 }
 
 @font-face {
-	
-		font-family:Coolfont;
-		src: url(../fonts/josefinslab-regular.ttf) format('truetype');
+		font-family: 'JosefinslabRegular';
+		src: url('../fonts/josefinslab-regular.ttf') format('truetype');
 		font-weight:normal;
 		font-style:normal;
 }
@@ -98,34 +96,46 @@ header, footer {
 
 /* Typography Styles */
 
-html {}
+html {
+	font-family: 'MontserratRegular', sans-serif;
+
+}
 
 h1 {
-	font-family: Coolfont, josefinslab-regular, serif;
+	font-family: 'JosefinslabRegular', serif;
 	letter-spacing: .125rem;
 	font-size: 3.75rem;
-	margin: 1.125rem;
+	margin: 1.125rem 0;
 	text-align: center;
 	
 }
 
 h2 {
-		font-size: 1.5rem;
+	font-family: 'JosefinslabRegular', serif;
+	letter-spacing: .125rem;
+	font-size: 1.5rem;
 
 }
 
-h2 {} + p {}
+h2 {
+		text-indent: 1.5rem;
+
+}
+p {
+		text-indent: 1.5rem;
+
+}
 
 p {
 	font-size: .75rem;
-	letter-spacing: .031rem;
+	letter-spacing: .03125rem;
 	word-spacing: .125rem;
-	text-indent: 1.5rem;
+	
 }
 	
 li {	
 	font-size: .75rem;
-	letter-spacing: .031rem;
+	letter-spacing: .03125rem;
 	word-spacing: .125rem;
 	
 }
