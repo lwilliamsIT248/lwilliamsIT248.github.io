@@ -90,7 +90,7 @@ header, footer {
 @font-face {
 	
 		font-family:Coolfont;
-		src: url(../fonts/montserrat-regular.ttf) format('truetype');
+		src: url(../fonts/josefinslab-regular.ttf) format('truetype');
 		font-weight:normal;
 		font-style:normal;
 }
@@ -100,17 +100,40 @@ header, footer {
 
 html {}
 
-h1 {}
+h1 {
+	font-family: Coolfont, josefinslab-regular, serif;
+	letter-spacing: .125rem;
+	font-size: 3.75rem;
+	margin: 1.125rem;
+	text-align: center;
+	
+}
 
-h2 {}
+h2 {
+		font-size: 1.5rem;
+
+}
 
 h2 {} + p {}
 
-p {}
+p {
+	font-size: .75rem;
+	letter-spacing: .031rem;
+	word-spacing: .125rem;
+	text-indent: 1.5rem;
+}
 	
-li {}
+li {	
+	font-size: .75rem;
+	letter-spacing: .031rem;
+	word-spacing: .125rem;
 	
-figcaption {}
+}
+	
+figcaption {
+	font-size: .75rem;
+	margin-bottom: 2rem;
+}
 
 
 /* Link Styling */
@@ -118,36 +141,78 @@ figcaption {}
 a {}
 
 a:link,
-a:visited {}
+a:visited {	
+	color: #33658A;
+	text-decoration: none;
+}
 
 a:focus,
-a:hover {}
+a:hover {	
+	outline: none;
+	text-decoration: none;
+}
 
 
 /* List Styling */
 
-ul {}
+ul {
+	margin: 1rem 0;
+	list-style-type: square;
+	
+}
 
-ol {}
+ol {
+	margin: 1rem 0;
+	list-style-type: lower-alpha;
+	
+}
 
-.long-list a:hover {}
+.long-list a:hover {
+	text-transform: uppercase;
+	
+}
 
 
 /* Navigation Menu */
 
-nav {}
+nav {
+	padding-left: 0;
+	margin-top: .25rem;
+	
+}
 
-nav a {}
+nav a {
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	line-height: 3;
+	text-align: center;
+	font-size: 1.125rem;
+	margin-bottom: 1.5rem;
+	border: .0625rem solid #33658A;
+	
+}
 
 nav a:focus,
-nav a:hover {}
+nav a:hover {
+	color: #FFF;
+	background-color: #33658A;
+	
+}
 
-nav a:active {}
+nav a:active {
+	color: #FFF;
+	background-color: #000;
+	
+}
 
 
 /* Footer Styles */
 
-footer {}
+footer {
+	text-align: center;
+	
+}
 
 
 
