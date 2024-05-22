@@ -117,20 +117,13 @@ h2 {
 
 }
 
-h2 {
-		text-indent: 1.5rem;
-
-}
-p {
-		text-indent: 1.5rem;
-
-}
+h2 {} + p {}
 
 p {
 	font-size: .75rem;
 	letter-spacing: .03125rem;
 	word-spacing: .125rem;
-	
+	text-indent: 1.5rem;
 }
 	
 li {	
