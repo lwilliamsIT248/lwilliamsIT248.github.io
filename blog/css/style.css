@@ -51,41 +51,36 @@
 @font-face {
 	font-family: 'RobotoRegular';
 	src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
-	font-weight:normal;
-	font-style:normal;
 }
 
 @font-face {
 	font-family: 'RozhaoneRegular';
 	src: url('../fonts/serif/rozhaone-regular.ttf') format('truetype');
-	font-weight:normal;
-	font-style:normal;
 }
 
 @font-face {
 	font-family: 'UltraRegular';
 	src: url('../fonts/serif/ultra-regular.ttf') format('truetype');
-	font-weight:normal;
-	font-style:normal;
 }
 
 @font-face {
 	font-family: 'MontserratRegular';
 	src: url('../fonts/sans-serif/montserrat-regular.ttf') format('truetype');
-	font-weight:normal;
-	font-style:normal;
+}
+
+body, h1, h2, h3, .menu-horizontal {
+    font-family: 'RobotoRegular';
 }
 
 .header {
-	font-family: 'RobotoRegular';
     font-size: 4rem;
-    transform: rotate(-7.5deg);
-    margin: 1.875rem;
 	text-align: center;
-	text-shadow: .125rem .125rem .25rem rgba(0, 0, 0, 0.5);}
+    text-shadow: .125rem .125rem .25rem rgba(0, 0, 0, 0.5);
+	transform: rotate(-7.5deg);
+    margin: 1.875rem;
+}
 
 .highlight {
-	font-family: 'UltraRegular';
     color: #fdf5e6;
 	background-color: #800000;
 	border-top-left-radius: .625rem;
@@ -96,20 +91,27 @@
 	box-shadow: .125rem .125rem .1625rem 0 rgba(0, 0, 0, 0.5);
 	text-shadow: .125rem .125rem .25rem rgba(0, 0, 0, 0.5);}
 
+.highlight, button {
+	font-family: 'UltraRegular';
+}
+
 .menu-horizontal {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 4rem;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-  margin-top: 6rem;
-  font-family: "RobotoRegular";
-  font-size: 1.5rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 4rem;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	margin-top: 6rem;
+	font-size: 1.5rem;
+    list-style: none;
+    text-align: center;
 }
 
 .menu-horizontal li {
-  list-style: none;
+    display: inline;
+    margin-right: 20px;
+	list-style: none;
 }
 
 .menu-horizontal li a {
@@ -131,28 +133,30 @@
 }
 
 h1 {
-	font-family: 'RobotoRegular';
 	font-size: 2rem;
-	font-size: 5vw;
 	}
 
 h2 {
-	font-family: 'RobotoRegular';
 	font-size: 1.5rem;
 	margin-left: 40px;
 	}
 
 h3 {
-	font-family: 'RobotoRegular';
 	font-size: 1.25rem;
 	}
 
-p {
+p, time {
 	font-family: 'MontserratRegular';
+}
+
+p {
 	font-size: 1rem;
 	}
 
 .main-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 	padding-left: 40px;
 }
 
@@ -164,7 +168,6 @@ p {
 }
 
 time {
-	font-family: 'MontserratRegular';
 	font-size: .75rem;
 	display: block;
 	margin-top: 20px;}
@@ -176,13 +179,16 @@ article {
 }
 
 .article-div {
+    flex: 1;
+    margin: 10px;
 	width: 100%; 
 	overflow: hidden; 
-	width: 1250px; 
 	float: left;
 }
 
 .subsection {
+    flex: 1;
+    margin: 10px;
 	display: flex;
 	justify-content: space-between;
 	margin-top: 20px;
@@ -196,26 +202,27 @@ section table {
 }
 
 button {
-	font-family: 'UltraRegular';
-	background-color: #708090;
-	border: none;
+	font-size: 16px;
 	color: white;
 	padding: 15px 32px;
 	text-align: center;
 	text-decoration: none;
+	text-shadow: .125rem .125rem .25rem rgba(0, 0, 0, 0.5);
 	display: inline-block;
-	font-size: 16px;
 	margin: 40px 2px;
 	cursor: pointer;
+	background-color: #708090;
+	border: none;
 	border-radius: 4px;
 	box-shadow: .125rem .125rem .1625rem 0 rgba(0, 0, 0, 0.5);
-	text-shadow: .125rem .125rem .25rem rgba(0, 0, 0, 0.5);
 }
 
 aside {
+    flex: 1;
+    margin: 100px;
 	float: right;
 	width: 25%;
-	padding-left: 20px;
+	padding-left: 40px;
 	border-left: 1px solid #000;
 }
 
@@ -253,7 +260,24 @@ img {
 	max-width: auto;
 	height: auto;
 }
+
 .container {
 	width: 100%;
 }
 
+@media (max-width: 768px) {
+    .menu-horizontal li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .main-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.5em;
+    }
+}
