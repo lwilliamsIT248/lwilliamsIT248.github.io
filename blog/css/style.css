@@ -111,6 +111,7 @@ body, html {
 }
 
 .article-image {
+    max-width: 100%;
 	display: table;
 	clear: both;
 	float: left;
@@ -218,9 +219,16 @@ nav .menu-horizontal {
 	border-top-color: linen;}
 
 .row2 .subsection table img {
+    max-width: 500px;
     width: 100%;
     height: auto; 
     display: block; 
+}
+
+.subsection { 
+	padding:0; 
+	display:grid; 
+	grid-template-columns:repeat(auto-fit, minmax(5rem, 1fr));grid-column-gap: 1%; 
 }
 
 .row2 .subsection tr:nth-child(2) {
@@ -228,7 +236,8 @@ nav .menu-horizontal {
 	}
 
 aside img {
-	width: 80%;
+    max-width: 500px;
+	width: 100%;
 }
 
 .right-column {
@@ -239,7 +248,7 @@ aside img {
 }
 
 .right-column img {
-    max-width: 100%;
+    max-width: 500px;
     height: auto;
     display: block;
 }
@@ -276,3 +285,7 @@ footer {
         margin-bottom: 0;
     }
 }
+
+ 
+2. Instead of creating a table for the image bar, apply grid layout; for example: .subsection { margin-top:4rem; margin-bottom:2rem; padding:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(5rem, 1fr)); grid-column-gap: 1%; } 
+Feel free to email me with any questions; I am happy to help.
